@@ -1,3 +1,5 @@
+<img src="https://cdn.discordapp.com/attachments/766382334067867668/1081007718904643604/frige.png" height=250 width=200>
+
 # RefrigeratorLauncher
 - This launcher can run Cultivation or _that anime game_, moving or removing `version.dll` file automatically 
 - You must put paths to Cultivation or _that anime game_, to game files and version.dll
