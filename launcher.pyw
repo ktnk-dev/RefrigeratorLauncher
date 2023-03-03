@@ -73,7 +73,7 @@ def gotogit():
 
 def gotowebsite():
     root.destroy()
-    webbrowser.open('https://frige.sinya.ru')
+    webbrowser.open('https://refrigerator.sinya.ru')
     exit()
 
 
