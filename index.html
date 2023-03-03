@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RefrigeratorLauncher</title>
+<style>
+body{
+    color: #fff;
+    margin: 0 30px;
+    padding: 0;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+header{
+    margin: 60px auto 30px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+} img {
+    margin: 0 auto;
+} .bg {
+    background-color: #222;
+    padding: 2px 5px;
+    border-radius: 4px;
+} .buttons {
+    margin: 20px auto;
+} .button {
+    color: #000;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 7px;
+    background-color: #bbb;
+    text-decoration: none;
+    transition: all .5s;
+} .button:hover{
+    background-color: #fff;
+} .video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto ;
+} video {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: #222 3px solid;
+}
+</style>
+</head>
+<body>
+    <header>
+        <img src="media/frige.png" alt="" width="200px" height="250px">
+        <h1 style="text-align: center; margin-bottom: 0;">Refrigerator Launcher</h1>
+        <h4 style="text-align: center; font-weight: normal;">Cultivation or <span class="bg">that anime game</span> launcher</h4>
+        <div class="buttons">
+            <a class="button">Github</a>
+            <a class="button">Download</a>
+        </div>
+        <h4 style="text-align: center; font-weight: normal;">Made with <span style="color: #f00;">❤</span> by <a href="https://sinya.ru/" style="color: #fff;">Sinya</a></h4>
+    </header>
+    <div class="video">
+        <h1 style="text-align: center; margin-bottom: 0;">Video demonstration</h1>
+        <video controls><source src="media/video.mp4" type="video/mp4"></video>
+    </div>
+</body>
+</html>
