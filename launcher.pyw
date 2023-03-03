@@ -1,16 +1,16 @@
 importerror = False
-try: import os
+try: import os, webbrowser
 except: importerror = True
-print(0)
 from tkinter import *
-print(1)
 root = Tk()
 root.resizable(width=False, height=False)
 root.title('')
+root.configure(bg='gray5')
 try: root.iconbitmap(default='icon.ico')
 except: ...
+
+width = 25
 root.geometry("+{}+{}".format(int(root.winfo_screenwidth()/2 - 185/2), int(root.winfo_screenheight()/2 - 130/2)))
-print(2)
  
 path = {}
 
@@ -61,27 +61,57 @@ try:
     else: cfgok = False
 except: cfgok = False
 
+def createcfg():
+    with open('config.cfg','w',encoding='utf-8') as file: file.write('original_launcher=\ncultivation_launcher=\ngame_path=\nversion_dll_path=')
+    root.destroy()
+    exit()
+
+def gotogit():
+    root.destroy()
+    webbrowser.open('https://github.com/ktnk-dev/RefrigeratorLauncher')
+    exit()
+
+def gotowebsite():
+    root.destroy()
+    webbrowser.open('https://frige.sinya.ru')
+    exit()
+
 
 if cfgok:
-    orig = Button(
-        text="Genshin Impact", width=25, height=2,
+    Button(
+        text="Genshin Impact", width=width, height=2,
         bg="black", fg="white", border='0',
-        command=runorig)
-    orig.pack()
-    cult = Button(
-        text="Cultivation", width=25, height=2,
+        command=runorig).pack()
+    Button(
+        text="Cultivation", width=width, height=2,
         bg="black", fg="white", border='0',
-        command=runcult)
-    cult.pack()
-    credit = Label(
-        text='Made with ❤ by Sinya', width=25,
-        bg="gray5", fg="white")
-    credit.pack()
+        command=runcult).pack()
 else: 
-    importerror = Label(
-        text='config.cfg is not configured\nor not exist', width=25,
-        bg="black", fg="red")
-    importerror.pack()
+     Label(
+        text='config.cfg is not configured\nor not exist', width=width,
+        bg="black", fg="red").pack()
+     
+     Button(
+        text="Create config.cfg", width=width, height=2,
+        bg="black", fg="white", border='0',
+        command=createcfg).pack()
 
 
+creditbuttons = Frame(root)
+creditbuttons.config(bg='gray5', width=width)
+creditbuttons.pack(side=BOTTOM)
+Button(creditbuttons,
+    text='Github', width=10, border='0', 
+    bg="gray5", fg="white",
+    command=gotogit).pack(side=LEFT)
+Button(creditbuttons,
+    text='Website', width=10, border='0', 
+    bg="gray5", fg="white",
+    command=gotowebsite).pack(side=RIGHT)
+
+credit = Frame(root)
+credit.pack(side=BOTTOM)
+Label(credit,
+    text='Made with ❤ by Sinya', width=width,
+    bg="gray5", fg="white").pack()
 root.mainloop()
