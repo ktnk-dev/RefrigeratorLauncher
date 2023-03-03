@@ -2,7 +2,7 @@
 
 # RefrigeratorLauncher
 - This launcher can run Cultivation or _that anime game_, moving or removing `version.dll` file automatically 
-- You must put paths to Cultivation or _that anime game_, to game files and version.dll
+- You must put paths to Cultivation, _that anime game_, game files and version.dll
 
 # Editing `config.cfg`
 **Config file must be in the same folder with app** (`.exe` or `.pyw`)
